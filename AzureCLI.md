@@ -7,6 +7,7 @@ az account list|jq '.[]|{"name": .name, "subscriptionId": .id, "tenantId": .tena
 ```
 
 
+
 List all Managed Identities in  RG
 ```
 az identity list -g "cpvcdp"|jq '.[]|{"name":.name,"principalId":.principalId,"type":.type}'
