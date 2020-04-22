@@ -5,7 +5,10 @@ List Subscriptions
 az account list|jq '.[]|{"name": .name, "subscriptionId": .id, "tenantId": .tenantId, "state": .state}'
 
 ```
-
+Create an Azure Service Principal (Change the name and add in the subscriptionId)
+```
+az ad sp create-for-rbac --name http://cloudbreak-app --role Contributor --scopes /subscriptions/{subscriptionId}
+```
 
 
 List all Managed Identities in  RG
